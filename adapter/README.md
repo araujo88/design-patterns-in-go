@@ -38,7 +38,7 @@ func (l *NewSystemLogger) Log(message string) {
 }
 ```
 
-You want the new system to be able to use the LegacyLogger without changing its code. You can create an adapter that implements the NewLogger interface, but uses the LegacyLogger internally:
+You want the new system to be able to use the `LegacyLogger` without changing its code. You can create an adapter that implements the `NewLogger` interface, but uses the `LegacyLogger` internally:
 
 ```go
 type LoggerAdapter struct {
@@ -51,7 +51,7 @@ func (a *LoggerAdapter) Log(message string) {
 }
 ```
 
-Now, you can use LegacyLogger in the new system:
+Now, you can use `LegacyLogger` in the new system:
 
 ```go
 func logMessage(message string, logger NewLogger) {
@@ -66,4 +66,4 @@ func main() {
 }
 ```
 
-In this example, LoggerAdapter is the adapter. It wraps LegacyLogger (the adaptee) and makes it compatible with NewLogger (the target interface). The Log method in LoggerAdapter adapts the interface of LegacyLogger to the NewLogger interface. The client code (the logMessage function) works with the NewLogger interface, so it can now use LegacyLogger through the LoggerAdapter. This is the essence of the Adapter Pattern.
+In this example, `LoggerAdapter` is the adapter. It wraps `LegacyLogger` (the adaptee) and makes it compatible with `NewLogger` (the target interface). The `Log` method in `LoggerAdapter` adapts the interface of `LegacyLogger` to the `NewLogger` interface. The client code (the `logMessage` function) works with the `NewLogger` interface, so it can now use `LegacyLogger` through the `LoggerAdapter`. This is the essence of the Adapter Pattern.

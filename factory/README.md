@@ -10,4 +10,41 @@ A factory method in a class is a method that returns objects of a varying protot
 
 In this example, we have a `Logger` interface that different types of loggers (like `ConsoleLogger` and `FileLogger`) implement. The `LoggerFactory` can create different types of loggers depending on the argument passed to `CreateLogger`.
 
+```go
+type Logger interface {
+	Log(message string)
+}
+
+type ConsoleLogger struct{}
+
+func (cl *ConsoleLogger) Log(message string) {
+	fmt.Println(message)
+}
+
+type FileLogger struct {
+	file *os.File
+}
+
+func (fl *FileLogger) Log(message string) {
+	fmt.Fprintln(fl.file, message)
+}
+
+type LoggerFactory struct{}
+
+func (lf *LoggerFactory) CreateLogger(loggerType string) (Logger, error) {
+	switch loggerType {
+	case "console":
+		return &ConsoleLogger{}, nil
+	case "file":
+		file, err := os.Create("log.txt")
+		if err != nil {
+			return nil, err
+		}
+		return &FileLogger{file: file}, nil
+	default:
+		return nil, fmt.Errorf("unsupported logger type")
+	}
+}
+```
+
 This could be part of a larger logging library where you can choose between different types of loggers depending on your requirements. For example, you might use a `ConsoleLogger` in a development environment to print logs for debugging, but in a production environment, you might use a `FileLogger` or maybe a `DatabaseLogger` to store logs more permanently.

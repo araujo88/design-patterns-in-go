@@ -4,7 +4,7 @@ The Singleton pattern is a design pattern that restricts the instantiation of a 
 
 The Singleton pattern is used for logging, driver objects, caching, thread pools, and database connections. It is a relatively simple pattern, but it comes with its own set of complications. The main issue is that it introduces global state into an application. For this reason, it's generally not considered a good practice to use singletons in a system that you want to be easy to test and maintain. However, it can be useful in certain scenarios where you need to coordinate logic in a globally accessible way.
 
-# Example
+## Example
 
 The singleton `WorkerPool` is the focus of this example. It's a structure containing a pool of workers, a pool of jobs and a `WaitGroup`.
 

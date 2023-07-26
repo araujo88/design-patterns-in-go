@@ -20,6 +20,8 @@ This pattern can be beneficial when we need to select an algorithm at runtime. I
 
 ## Example
 
+Let's use the Strategy pattern to select between a Bubble sort and a Quick sort strategy at runtime:
+
 ```go
 // SortStrategy defines the method for sorting
 type SortStrategy interface {

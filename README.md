@@ -46,6 +46,7 @@ In a rush? Learn the top 10 design patterns:
 - **Bridge**: Decouples an abstraction from its implementation so that the two can vary independently.
 - **Flyweight**: Uses sharing to support large numbers of fine-grained objects efficiently.
 - **Service Locator**: Used to encapsulate the processes involved in obtaining a service with a strong abstraction layer.
+- **Data Access Object (DAO)**: Used to separate the logic that retrieves data from a database from the business logic of the application.
 
 ### Behavioral Patterns
 
@@ -56,4 +57,4 @@ In a rush? Learn the top 10 design patterns:
 - **Template**: Defines the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 - **Iterator**: Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 - **Mediator**: Defines an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
-  Memento: Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.
+- **Memento**: Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.

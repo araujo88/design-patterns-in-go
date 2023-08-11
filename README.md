@@ -2,32 +2,6 @@
 
 A list of design patterns implemented in Go with REAL WORLD examples!
 
-In a rush? Learn the top 10 design patterns:
-
-## Top 10 design patterns according to ChatGPT
-
-- **Singleton**: This pattern restricts a class from instantiating multiple objects. It is used where only a single instance of a class is required to control actions, such as logging, driver objects, caching, thread pool, database connections, and more.
-
-- **Factory**: A creational pattern that provides one of the best ways to create an object. It provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
-
-- **Abstract Factory**: This is a creational pattern that provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.
-
-- **Builder**: Used to construct a complex object step by step and the final step will return the object. This is useful when you need to create an object with many optional parameters or when the construction process needs to be explicit and controlled.
-
-- **Prototype**: This pattern is used when creation of object directly is costly. For example, an object is to be created after a costly database operation. This pattern provides a mechanism to copy the original object.
-
-- **Adapter**: This pattern works as a bridge between two incompatible interfaces. It combines capabilities of independent interfaces. A real-life example could be a case of a card reader, which acts as an adapter between memory card and a laptop.
-
-- **Bridge:** This pattern is used to decouple an abstraction from its implementation so that the two can vary independently. This is useful when you want to avoid a permanent binding between an abstraction and its implementation.
-
-- **Composite**: This pattern creates a tree structure of a group of objects. This pattern creates a class that contains a group of its own objects. This class provides ways to modify its group of the same objects.
-
-- **Observer**: This pattern is used when there is a one-to-many relationship between objects such as if one object is modified, its dependent objects are to be notified automatically.
-
-- **Strategy**: This pattern is used when we have multiple algorithm for a specific task and the client decides the actual implementation to be used at runtime.
-
-## List of design patterns
-
 ### Creational Patterns
 
 - **Singleton**: Ensures a class only has one instance and provides a global point of access to it.
@@ -45,8 +19,6 @@ In a rush? Learn the top 10 design patterns:
 - **Proxy**: Provides a surrogate or placeholder for another object to control access to it.
 - **Bridge**: Decouples an abstraction from its implementation so that the two can vary independently.
 - **Flyweight**: Uses sharing to support large numbers of fine-grained objects efficiently.
-- **Service Locator**: Used to encapsulate the processes involved in obtaining a service with a strong abstraction layer.
-- **Data Access Object (DAO)**: Used to separate the logic that retrieves data from a database from the business logic of the application.
 
 ### Behavioral Patterns
 
@@ -58,3 +30,8 @@ In a rush? Learn the top 10 design patterns:
 - **Iterator**: Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 - **Mediator**: Defines an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
 - **Memento**: Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.
+
+### Non-GoF Patterns
+
+- **Service Locator**: Used to encapsulate the processes involved in obtaining a service with a strong abstraction layer.
+- **Data Access Object (DAO)**: Used to separate the logic that retrieves data from a database from the business logic of the application.

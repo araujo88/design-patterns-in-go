@@ -30,6 +30,9 @@ A list of design patterns implemented in Go with REAL WORLD examples!
 - **Iterator**: Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 - **Mediator**: Defines an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
 - **Memento**: Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.
+- **Chain of Responsability**: Used to achieve loose coupling in software design where a request from the client is passed to a chain of objects to process them.
+- **Interpreter**: Defines a grammatical representation for a language and provides an interpreter to deal with this grammar.
+- **Visitor**: Used when we have to perform an operation on a group of similar kind of Objects.
 
 ### Non-GoF Patterns
 

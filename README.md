@@ -2,6 +2,8 @@
 
 A list of design patterns implemented in Go with REAL WORLD examples!
 
+## "Gang of Four" patterns
+
 ### Creational Patterns
 
 - **Singleton**: Ensures a class only has one instance and provides a global point of access to it.
@@ -34,7 +36,18 @@ A list of design patterns implemented in Go with REAL WORLD examples!
 - **Interpreter**: Defines a grammatical representation for a language and provides an interpreter to deal with this grammar.
 - **Visitor**: Used when we have to perform an operation on a group of similar kind of Objects.
 
-### Non-GoF Patterns
+## Other Patterns
 
-- **Service Locator**: Used to encapsulate the processes involved in obtaining a service with a strong abstraction layer.
-- **Data Access Object (DAO)**: Used to separate the logic that retrieves data from a database from the business logic of the application.
+- **Active Record Pattern**: Found in many modern ORM (Object Relational Mapping) libraries, the Active Record pattern ties database access directly to an object, where the object mirrors the database table. Each instance of the object corresponds to a row in the table.
+- **Repository Pattern**: Acts as a kind of in-memory domain object collection. Client objects construct query specifications declaratively and submit them to Repository for satisfaction.
+- **Data Access Object (DAO) Pattern**: Provides an abstract interface to a database or a persistent storage mechanism.
+- **Dependency Injection (DI) Pattern**: A way to achieve Inversion of Control (IoC) in a system by breaking dependencies between higher-level and lower-level software layers.
+- **Model-View-ViewModel (MVVM) Pattern**: Primarily used for designing the user interface. It divides an application into three interconnected components: Model (represents the data), View (represents the UI), and ViewModel (acts as a bridge that handles the data presentation in the View).
+- **CQRS (Command Query Responsibility Segregation)**: A pattern where you separate the command (write) operations from the query (read) operations, ensuring that a method is either a command that performs an action or a query that returns data, but not both.
+- **Event Sourcing**: Capturing all changes to an application state as a sequence of events, allowing for replaying these events to restore the application's state.
+- **Flux/Redux Pattern**: Used mainly in frontend frameworks like React. It involves a unidirectional data flow where the view sends actions to a central dispatcher, which updates the store, and the changed state then reflects in the view.
+- **Saga Pattern**: A mechanism to manage long-running, complex processes or workflows. Sagas manage failures, maintain consistency, and coordinate activities.
+- **Service Locator Pattern**: Provides a centralized point from which objects can retrieve services (like dependency injection but involves the client requesting its dependencies).
+- **Null Object Pattern**: A design pattern that uses polymorphism to represent the absence of an object by providing an alternative that offers default do-nothing behavior.
+- **Value Object Pattern**: Small objects that represent a descriptive aspect of the domain with no conceptual identity. They are immutable, meaning that they cannot be altered once they are created.
+- **Thread Pool Pattern**: Allows a limited set of threads to be reused for executing multiple tasks.

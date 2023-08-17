@@ -6,6 +6,7 @@ Basically, the pattern involves two main components:
 
  - Abstract Class: Defines abstract placeholder operations (primitive operations), concrete operations, and a template method.
  - Concrete Class: Implements the placeholder operations.
+
 The template method in the abstract class defines the structure of an algorithm and calls placeholder operations as well as concrete operations.
 
 ## Example
